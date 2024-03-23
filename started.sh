@@ -4,7 +4,7 @@ THUNDERBIRD_PATH="/home/minowa/ダウンロード/thunderbird-115.8.1/thunderbir
 
 case "${1}" in
   "start")
-    "${THUNDERBIRD_PATH}" &
+    "${THUNDERBIRD_PATH}" > /dev/null 2>&1 &
     ;;
   "stop")
     kill $(pgrep thunderbird) &
