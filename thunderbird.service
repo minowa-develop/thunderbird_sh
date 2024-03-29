@@ -6,9 +6,9 @@ Requires=default.target
 [Service]
 Type=oneshot
 EnvironmentFiletc/sysconfig/httpd
-ExecStart=/home/minowa/tools/started-run/started.sh "start"
-ExecReload=/home/minowa/tools/started-run/started.sh "reload"
-ExecStop=/home/minowa/tools/started-run/started.sh "stop"
+ExecStart=/home/minowa/tools/started-run/thunderbird.sh "start"
+ExecReload=/home/minowa/tools/started-run/thunderbird.sh "reload"
+ExecStop=/home/minowa/tools/started-run/thunderbird.sh "stop"
 KillSignal=SIGTERM
 PrivateTmp=true
 
