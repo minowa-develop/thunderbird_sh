@@ -1,0 +1,16 @@
+[Unit]
+Description=Thunderbird service
+After=network.target
+Requires=default.target
+
+[Service]
+Type=oneshot
+EnvironmentFiletc/sysconfig/httpd
+ExecStart=/home/minowa/tools/started-run/started.sh "start"
+ExecReload=/home/minowa/tools/started-run/started.sh "reload"
+ExecStop=/home/minowa/tools/started-run/started.sh "stop"
+KillSignal=SIGTERM
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
