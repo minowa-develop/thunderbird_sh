@@ -28,3 +28,5 @@ case "${1}" in
     echo "not option: ${1}. please input [start or stop]"
     exit 1
 esac
+
+exit $?
