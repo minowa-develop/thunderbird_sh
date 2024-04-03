@@ -13,9 +13,6 @@ function stop_app {
 }
 
 case "${1}" in
-  "start")
-    start_app
-    ;;
   "stop")
     stop_app
     ;;
@@ -25,8 +22,7 @@ case "${1}" in
     start_app
     ;;
   *)
-    echo "not option: ${1}. please input [start or stop]"
-    exit 1
+    start_app
 esac
 
 exit $?
